@@ -20,6 +20,7 @@ export class HomeComponent {
   }
 
   buscarPokemon(termino: string) {
+    this.errorSearch = false;
     this.pokemonService.getPokemonData(termino).subscribe(
       (res) => {
         this.pokemons = [res];
