@@ -1,1 +1,15 @@
 <app-search></app-search>
+
+<div class="grid grid-cols-4 gap-4 my-6">
+  <div
+    *ngFor="let pokemon of pokemons"
+    class="flex flex-col items-center justify-center w-full p-4 border rounded-lg"
+  >
+    <div>
+      <img [src]="pokemon.sprites.front_default" alt="" />
+    </div>
+    <div>
+      <h2>{{ pokemon.name | uppercase }}</h2>
+    </div>
+  </div>
+</div>
