@@ -1,1 +1,19 @@
-<p>detail works!</p>
+<div class="flex justify-center w-full min-h-screen gap-8">
+  <div>
+    <img [src]="pokemon.sprites.other?.home?.front_default" alt="" />
+  </div>
+  <div>
+    <h2 class="text-3xl font-bold">
+      POKEMON:
+      <span class="text-yellow-400">{{ pokemon.name | uppercase }}</span>
+    </h2>
+    <div>
+      <h3 class="font-bold">Habilidades</h3>
+      <div class="flex flex-col">
+        <span *ngFor="let ability of pokemon.abilities">{{
+          ability.ability.name
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
