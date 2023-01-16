@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, mergeMap, toArray } from 'rxjs';
+import { mergeMap, toArray } from 'rxjs';
+import { Pokemon } from '../interface/pokemon.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -19,5 +20,10 @@ export class PokemonService {
         mergeMap((pokemon: any) => this.http.get<any>(pokemon.url)),
         toArray()
       );
+  }
+
+  //Recupera la data de un pokemon en especifico
+  getPokemonData(name: string) {
+    return this.http.get<Pokemon>(this.BASE_URL + '/pokemon/' + name);
   }
 }
