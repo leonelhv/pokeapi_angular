@@ -1,4 +1,9 @@
 <div class="flex gap-4">
-  <input class="flex-1 p-2 border border-gray-600 rounded-md" />
-  <button class="px-6 text-white bg-red-500 rounded-md">Buscar</button>
+  <input class="flex-1 p-2 border border-gray-600 rounded-md" #inputTermino />
+  <button
+    class="px-6 text-white bg-red-500 rounded-md"
+    (click)="enviarTermino(inputTermino.value)"
+  >
+    Buscar
+  </button>
 </div>
