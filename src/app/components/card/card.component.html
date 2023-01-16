@@ -1,9 +1,14 @@
 <a
   [routerLink]="['/detail', pokemon.name]"
-  class="flex flex-col items-center justify-center w-full p-4 border rounded-lg"
+  class="flex flex-col items-center justify-between w-full h-40 p-4 border rounded-lg bg-slate-200 card-pokemon"
 >
-  <div>
-    <img [src]="pokemon.sprites.front_default" alt="" />
+  <div class="flex items-center justify-center flex-grow">
+    <img [src]="pokemon.sprites.front_default" alt="" class="h-full simple" />
+    <img
+      class="h-full animated"
+      [src]="pokemon.sprites.versions?.['generation-v']?.['black-white']?.animated?.front_default"
+      alt=""
+    />
   </div>
   <div>
     <h2>{{ pokemon.name | uppercase }}</h2>

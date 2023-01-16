@@ -1,0 +1,9 @@
+.animated {
+  display: none;
+} /* by default animated pic is hidden */
+.card-pokemon:hover .animated {
+  display: block;
+}
+.card-pokemon:hover .simple {
+  display: none;
+} /* hide simple image and display animated on mouseover */
